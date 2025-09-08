@@ -20,7 +20,7 @@ numUser5 = numUser5.value
  */
 console.log(numUser1);
 
-let second = 3
+let second = 30
 countdown.innerText = second--
 /* Array vuoto */
    let arrayRandomNum = []
@@ -64,6 +64,10 @@ myForm.addEventListener("submit",
 /* Confrontare ogni numero di ArrayCasuale con numeri ArrayUtente */
         let numVincenti = []
         console.log(numVincenti);
+
+        for (i=0; i < numUtente.length; i++) {
+
+        }
 })
 
 
