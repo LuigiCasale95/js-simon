@@ -21,6 +21,7 @@ countdown.innerText = second--
 /* generazione array con 5 num. casuali */
    arrayRandomNum = arrayAddNum(10, 50, 5);
    console.log(arrayRandomNum);
+
 /* Far apparire i numeri in HTML */
    for (i = 0; i < arrayRandomNum.length; i++) {
     let elementLi = arrayRandomNum[i]
@@ -56,25 +57,16 @@ myForm.addEventListener("submit",
         console.log(numUtente);
 /* Confrontare ogni numero di ArrayCasuale con numeri ArrayUtente */
         msn.innerHTML = "I numeri indovinati sono: "
-        numeriVincenti = []
+        numeriIndovinati = []
         msn.append(numeriIndovinati)
 
-        for (let i = 0; i < arrayRandomNum.length; i++) {
-          if (arrayRandomNum[i] === numUtente[0]) {
-            numeriIndovinati.push(arrayRandomNum[i])
-          } else if (arrayRandomNum[i] === numUtente[1]) {
-                numeriIndovinati.push(arrayRandomNum[i])
-            } else if (arrayRandomNum[i] === numUtente[2]) {
-                numeriIndovinati.push(arrayRandomNum[i])
-            } else if (arrayRandomNum[i] === numUtente[3]) {
-                numeriIndovinati.push(arrayRandomNum[i])
-            } else if (arrayRandomNum[i] === numUtente[4]) {
-                numeriIndovinati.push(arrayRandomNum[i])
-            } 
+        for (let i = 0; i < numUtente.length; i++) {
+            if (arrayRandomNum.includes(parseInt(numUtente[i]))) {
+                numeriIndovinati.push(numUtente[i])
+            }
           }       
-
-
-
+ console.log(numeriIndovinati);
+ msn.append(numeriIndovinati)
 })
 
 
@@ -85,7 +77,7 @@ myForm.addEventListener("submit",
  
 
 /* FUNZIONI */
-/* Generatore numeri casuali */
+/* Generatore numeri casuali tra min e max*/
 function randomNumber(min, max) {
     let number = Math.floor(Math.random() * (max - min +1)) + min
     return number
