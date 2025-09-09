@@ -12,15 +12,8 @@ let numUser3 = document.querySelector(".form-control3")
 let numUser4 = document.querySelector(".form-control4")
 let numUser5 = document.querySelector(".form-control5")
 
-/* numUser1 = numUser1.value
-numUser2 = numUser2.value
-numUser3 = numUser3.value
-numUser4 = numUser4.value
-numUser5 = numUser5.value
- */
-console.log(numUser1);
 
-let second = 30
+let second = 2
 countdown.innerText = second--
 /* Array vuoto */
    let arrayRandomNum = []
@@ -62,12 +55,26 @@ myForm.addEventListener("submit",
 
         console.log(numUtente);
 /* Confrontare ogni numero di ArrayCasuale con numeri ArrayUtente */
-        let numVincenti = []
-        console.log(numVincenti);
+        msn.innerHTML = "I numeri indovinati sono: "
+        numeriVincenti = []
+        msn.append(numeriIndovinati)
 
-        for (i=0; i < numUtente.length; i++) {
+        for (let i = 0; i < arrayRandomNum.length; i++) {
+          if (arrayRandomNum[i] === numUtente[0]) {
+            numeriIndovinati.push(arrayRandomNum[i])
+          } else if (arrayRandomNum[i] === numUtente[1]) {
+                numeriIndovinati.push(arrayRandomNum[i])
+            } else if (arrayRandomNum[i] === numUtente[2]) {
+                numeriIndovinati.push(arrayRandomNum[i])
+            } else if (arrayRandomNum[i] === numUtente[3]) {
+                numeriIndovinati.push(arrayRandomNum[i])
+            } else if (arrayRandomNum[i] === numUtente[4]) {
+                numeriIndovinati.push(arrayRandomNum[i])
+            } 
+          }       
 
-        }
+
+
 })
 
 
@@ -75,8 +82,7 @@ myForm.addEventListener("submit",
 
 
 
-
-
+ 
 
 /* FUNZIONI */
 /* Generatore numeri casuali */
